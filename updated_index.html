@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oussama Ghermoul | Développeur & Designer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #111; color: #f0f0f0; line-height: 1.6; }
+    header { background: #1a1a1a; padding: 20px; text-align: center; }
+    header h1 { font-size: 2.5em; color: #00ffd5; }
+    header p { font-size: 1.2em; color: #ccc; }
+    nav { background: #222; padding: 10px; text-align: center; }
+    nav a { margin: 0 15px; color: #00ffd5; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    h2 { color: #00ffd5; margin-bottom: 20px; font-size: 2em; }
+    .skills span, .projects div { background: #1a1a1a; padding: 10px; margin: 5px; border-radius: 8px; display: inline-block; }
+    .projects div { display: block; margin-bottom: 15px; }
+    footer { background: #1a1a1a; text-align: center; padding: 20px; color: #888; }
+    .contact i { margin-right: 10px; color: #00ffd5; }
+    .contact a { color: #ccc; text-decoration: none; display: block; margin-bottom: 5px; }
+    .about, .skills, .projects, .contact { margin-bottom: 60px; }
+    .calculator { background: #1a1a1a; padding: 20px; border-radius: 10px; text-align: center; max-width: 300px; margin: 40px auto; }
+    .calculator input[type="text"] { width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none; text-align: right; }
+    .calculator button { width: 22%; margin: 2%; padding: 10px; border: none; background: #00ffd5; color: #000; font-weight: bold; border-radius: 5px; cursor: pointer; }
+    .calculator button:hover { background: #00c4a7; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Oussama Ghermoul</h1>
+    <p>Développeur & Designer</p>
+  </header>
+
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets</a>
+    <a href="#calculator">Calculatrice</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>À propos de moi</h2>
+    <p>Je m'appelle Oussama, je suis étudiant en deuxième année. Mes loisirs incluent divers types de sports, notamment les sports de combat et l'haltérophilie. Passionné par le développement et la programmation, je m'efforce de créer des interfaces innovantes et fonctionnelles, alliant esthétique et performance. Mon objectif est de devenir un professionnel reconnu dans le monde du développement web et du design numérique.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Compétences</h2>
+    <span>HTML5</span>
+    <span>CSS3</span>
+    <span>JavaScript</span>
+    <span>React.js</span>
+    <span>Python</span>
+    <span>Figma</span>
+    <span>Git & GitHub</span>
+    <span>Responsive Design</span>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Mes Projets</h2>
+    <div>
+      <strong>Calculatrice Web</strong><br>
+      <p>Une application simple de calculatrice construite avec HTML, CSS et JavaScript. Permet les opérations de base avec une interface responsive.</p>
+      <a href="#calculator">Voir la calculatrice</a>
+    </div>
+    <div>
+      <strong>Portfolio Personnel</strong><br>
+      <p>Un site web personnel (celui-ci) conçu pour présenter mes compétences, mes projets, et mes coordonnées de manière professionnelle et élégante.</p>
+    </div>
+    <div>
+      <strong>Mini Blog (à venir)</strong><br>
+      <p>Un projet en développement : une plateforme simple pour publier et lire des articles personnels avec une interface moderne.</p>
+    </div>
+  </section>
+
+  <section id="calculator" class="calculator">
+    <h2>Calculatrice</h2>
+    <input type="text" id="display" disabled>
+    <br>
+    <button onclick="append('7')">7</button>
+    <button onclick="append('8')">8</button>
+    <button onclick="append('9')">9</button>
+    <button onclick="append('/')">/</button>
+    <button onclick="append('4')">4</button>
+    <button onclick="append('5')">5</button>
+    <button onclick="append('6')">6</button>
+    <button onclick="append('*')">*</button>
+    <button onclick="append('1')">1</button>
+    <button onclick="append('2')">2</button>
+    <button onclick="append('3')">3</button>
+    <button onclick="append('-')">-</button>
+    <button onclick="append('0')">0</button>
+    <button onclick="append('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="append('+')">+</button>
+    <button onclick="clearDisplay()" style="width: 94%; background: #ff5555; color: white;">C</button>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:oussama_nadji@hotmail.com">oussama_nadji@hotmail.com</a></p>
+    <p><i class="fas fa-phone"></i> 0558381267</p>
+    <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/oussama_ghermoul">@oussama_ghermoul</a></p>
+    <p><i class="fab fa-facebook"></i> <a href="https://facebook.com/oussama.ghermoul">Oussama Ghermoul</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Oussama Ghermoul. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function append(value) {
+      document.getElementById('display').value += value;
+    }
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+    function calculate() {
+      try {
+        document.getElementById('display').value = eval(document.getElementById('display').value);
+      } catch (e) {
+        document.getElementById('display').value = 'Erreur';
+      }
+    }
+  </script>
+</body>
+</html>
